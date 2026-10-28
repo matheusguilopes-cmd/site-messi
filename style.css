@@ -1,0 +1,1312 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0b12;
+    color: white;
+    line-height: 1.6;
+}
+/* MENU */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #08080d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #111827, #172554);
+}
+
+header img {
+    width: 900px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin: 5px 0;
+}
+
+
+/* SEÇÕES */
+
+section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+
+/* CARDS DE ESTATÍSTICAS */
+section > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+    margin: 1%;
+    padding: 25px;
+    background: linear-gradient(135deg, #151520, #1c1c2b);
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #252538;
+    transition: 0.3s;
+}
+
+section > div:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+section > div h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+section > div p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+
+/* LISTAS DE TÍTULOS */
+ul {
+    list-style: none;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+li {
+    background: linear-gradient(145deg, #151520, #202033);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #292940;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.12);
+}
+
+li strong {
+    display: block;
+    color: #38bdf8;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+li p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TÍTULOS NO CELULAR */
+@media (max-width: 600px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bandeira {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 8px;
+    border-radius: 3px;
+}
+
+/* ADAPTAÇÃO PARA CELULAR */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    header {
+        padding: 60px 15px;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section > div {
+        width: 46%;
+        margin: 1%;
+        padding: 18px 10px;
+    }
+
+    section > div h3 {
+        font-size: 16px;
+    }
+
+    section > div p {
+        font-size: 23px;
+    }
+
+    li {
+        padding: 15px;
+    }
+}
+
+/* ESCUDOS DOS CLUBES */
+.escudo {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 3px;
+}
+
+/* LINHA DO TEMPO DA CARREIRA */
+.carreira-intro {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.linha-do-tempo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.etapa {
+    width: 100%;
+    min-width: 0;
+    min-height: 340px;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #151520, #202033);
+    border: 1px solid #292940;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.etapa:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.12);
+}
+
+.etapa .ano {
+    display: block;
+    color: #38bdf8;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.etapa img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 15px auto;
+}
+
+.etapa h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.etapa p {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.etapa .ano {
+    display: block;
+    color: #38bdf8;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .linha-do-tempo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .etapa{
+        min-height: 280px;
+    }
+}
+
+
+.atualizacao {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+/* RECORDES HISTÓRICOS */
+
+.recordes-intro {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.recordes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.recorde {
+    background: linear-gradient(145deg, #151520, #202033);
+    border: 1px solid #292940;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.recorde:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+.recorde-icon {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.recorde h3 {
+    color: #38bdf8;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.recorde p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .recordes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .recorde {
+        padding: 22px 12px;
+    }
+
+    .recorde h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .recordes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CORREÇÃO DO LAYOUT DOS RECORDES */
+
+#recordes {
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+#recordes .recordes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+#recordes .recorde {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+#recordes .recorde h3 {
+    font-size: 34px;
+    white-space: nowrap;
+}
+
+#recordes .recorde p {
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+
+#recordes .recorde-icon {
+    font-size: 32px;
+}
+
+@media (max-width: 768px) {
+    #recordes .recordes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    #recordes .recordes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* GRÁFICO DE GOLS */
+
+#grafico-gols {
+    max-width: 1100px;
+}
+
+.grafico-intro {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.grafico {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(145deg, #151520, #202033);
+    border: 1px solid #292940;
+    border-radius: 18px;
+}
+
+.barra-item {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.barra-item:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.barra-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.barra-info strong {
+    color: #38bdf8;
+    font-size: 18px;
+}
+
+.barra-fundo {
+    width: 100%;
+    height: 18px;
+    background: #090912;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+.barra-barcelona {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+}
+
+.barra-argentina {
+    background: linear-gradient(90deg, #60a5fa, #bae6fd);
+}
+
+.barra-inter {
+    background: linear-gradient(90deg, #db2777, #f9a8d4);
+}
+
+.barra-psg {
+    background: linear-gradient(90deg, #7c3aed, #c4b5fd);
+}
+
+.grafico-nota {
+    margin-top: 18px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .grafico {
+        padding: 20px 15px;
+    }
+}
+
+
+/* GRÁFICO DE TÍTULOS POR EQUIPE */
+
+#grafico-titulos {
+    max-width: 1100px;
+}
+
+.titulos-intro {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.grafico-titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(145deg, #151520, #202033);
+    border: 1px solid #292940;
+    border-radius: 18px;
+}
+
+.titulo-item {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.titulo-item:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.titulo-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.titulo-info strong {
+    color: #38bdf8;
+    font-size: 20px;
+}
+
+.titulo-fundo {
+    width: 100%;
+    height: 20px;
+    background: #090912;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.titulo-barra {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+.titulo-barcelona {
+    background: linear-gradient(90deg, #dc2626, #2563eb);
+}
+
+.titulo-argentina {
+    background: linear-gradient(90deg, #60a5fa, #bae6fd);
+}
+
+.titulo-inter {
+    background: linear-gradient(90deg, #db2777, #f9a8d4);
+}
+
+.titulo-psg {
+    background: linear-gradient(90deg, #7c3aed, #c4b5fd);
+}
+
+.titulos-nota {
+    margin-top: 18px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .grafico-titulos {
+        padding: 20px 15px;
+    }
+}
+
+
+/* ANIMAÇÃO SUAVE DOS CARDS */
+
+@keyframes aparecerCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section > div {
+    animation: aparecerCard 0.7s ease both;
+}
+
+/* EFEITO AO PASSAR O MOUSE NOS CARDS */
+
+section > div:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* RESPEITAR QUEM PREFERE MENOS ANIMAÇÕES */
+
+@media (prefers-reduced-motion: reduce) {
+    section > div {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+
+/* ANIMAÇÃO DAS BARRAS DOS GRÁFICOS */
+
+@keyframes crescerTitulos {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.titulo-barra {
+    transform-origin: left;
+    animation: crescerTitulos 1.5s ease-out both;
+}
+
+/* RESPEITAR A PREFERÊNCIA POR MENOS ANIMAÇÕES */
+@media (prefers-reduced-motion: reduce) {
+    .titulo-barra {
+        animation: none;
+    }
+}
+
+
+/* COMPARATIVO DE GOLS E ASSISTÊNCIAS */
+
+#comparativo {
+    max-width: 1100px;
+}
+
+.comparativo-intro {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.comparativo-legenda {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+    color: white;
+}
+
+.comparativo-legenda span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comparativo-legenda i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.legenda-gols {
+    background: #38bdf8;
+}
+
+.legenda-assistencias {
+    background: #a78bfa;
+}
+
+.comparativo-equipes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(145deg, #151520, #202033);
+    border: 1px solid #292940;
+    border-radius: 18px;
+}
+
+.comparativo-equipe {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    background: #10101a;
+    border: 1px solid #292940;
+    border-radius: 12px;
+    color: white;
+}
+
+.comparativo-equipe:hover {
+    transform: translateY(-3px);
+    transition: transform 0.3s ease;
+}
+
+.comparativo-equipe h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.comparativo-equipe p {
+    margin: 10px 0;
+    color: #cbd5e1;
+}
+
+.comparativo-equipe strong {
+    color: white;
+}
+
+.comparativo-fundo {
+    width: 100%;
+    height: 14px;
+    background: #08080d;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.comparativo-barra {
+    height: 100%;
+    border-radius: 20px;
+    transform-origin: left;
+    animation: crescerTitulos 1.5s ease-out both;
+}
+
+.barra-gols {
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+}
+
+.barra-assistencias {
+    background: linear-gradient(90deg, #7c3aed, #a78bfa);
+}
+
+@media (max-width: 600px) {
+    .comparativo-equipes {
+        padding: 12px;
+    }
+
+    .comparativo-equipe {
+        padding: 12px;
+    }
+
+    .comparativo-legenda {
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+.comparativo-equipe > p:first-of-type {
+    font-size: 32px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.comparativo-equipe > p:first-of-type strong {
+    font-size: 24px;
+    color: white;
+}
+
+
+/* MÉDIAS POR PARTIDA */
+
+.medias-equipe {
+    margin-top: 20px;
+    padding: 15px;
+    background: #08080d;
+    border-radius: 10px;
+    border-left: 3px solid #38bdf8;
+}
+
+.medias-equipe p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+    color: #cbd5e1;
+}
+
+.medias-equipe strong {
+    color: #38bdf8;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .medias-equipe p {
+        font-size: 13px;
+    }
+}
+
+
+/* LINHA DO TEMPO INTERATIVA */
+
+#linha-do-tempo-interativa {
+    max-width: 1100px;
+}
+
+.timeline-intro {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.timeline-anos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.timeline-anos button {
+    padding: 12px 20px;
+    background: #151520;
+    color: white;
+    border: 1px solid #292940;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.timeline-anos button:hover,
+.timeline-anos button.ano-selecionado {
+    background: #0284c7;
+    border-color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+.timeline-detalhe {
+    padding: 30px;
+    background: linear-gradient(145deg, #151520, #202033);
+    border: 1px solid #292940;
+    border-left: 4px solid #38bdf8;
+    border-radius: 16px;
+    min-height: 180px;
+}
+
+.timeline-detalhe h3 {
+    color: #38bdf8;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.timeline-detalhe h4 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.timeline-detalhe p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .timeline-anos button {
+        padding: 10px 14px;
+    }
+
+    .timeline-detalhe {
+        padding: 20px;
+        width: 100%;
+max-width: 900px;
+margin: 0 auto;
+box-sizing: border-box;
+    }
+}
+
+
+/* FOTOS DA LINHA DO TEMPO */
+
+#timeline-imagem {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px auto;
+    border-radius: 14px;
+    border: 1px solid #292940;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    #timeline-imagem {
+        height: 220px;
+    }
+}
+
+/* AJUSTE DA LINHA DO TEMPO */
+
+#linha-do-tempo-interativa {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.timeline-detalhe {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#timeline-imagem {
+    width: 100%;
+    max-width: 650px;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+.timeline-detalhe h4,
+.timeline-detalhe p {
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .timeline-detalhe {
+        padding: 20px;
+    }
+
+    #timeline-imagem {
+        height: 220px;
+    }
+}
+
+
+/* COMPARATIVO MESSI X CRISTIANO RONALDO */
+
+#messi-vs-cr7 {
+    padding: 60px 8%;
+    text-align: center;
+    background: linear-gradient(180deg, #0b0b12, #111827);
+}
+
+#messi-vs-cr7 h2 {
+    color: #38bdf8;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.comparativo-intro {
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+.comparativo-atualizacao {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.duelo-jogadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px auto 45px;
+    flex-wrap: wrap;
+}
+
+.jogador-card {
+    background: #171722;
+    border: 1px solid #303044;
+    border-radius: 15px;
+    padding: 25px;
+    width: 240px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.jogador-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.jogador-card h3 {
+    color: #fff;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.jogador-equipe {
+    color: #38bdf8;
+}
+
+.duelo-vs {
+    color: #38bdf8;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.comparativo-subtitulo {
+    color: #fff;
+    font-size: 21px;
+    margin: 35px 0 15px;
+}
+
+
+.comparativo-estatistica {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 25px;
+    background: #171722;
+    border: 1px solid #303044;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.comparativo-valores {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    color: #d1d5db;
+    margin-bottom: 15px;
+}
+
+.comparativo-valores span {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.comparativo-valores strong {
+    color: #38bdf8;
+    font-size: 20px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+.barra-comparativa {
+    height: 12px;
+    background: #343444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barra-messi {
+    height: 100%;
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+    border-radius: 10px;
+}
+
+.comparativo-observacao {
+    color: #9ca3af;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    #messi-vs-cr7 {
+        padding: 40px 5%;
+    }
+
+    #messi-vs-cr7 h2 {
+        font-size: 26px;
+    }
+
+    .duelo-jogadores {
+        gap: 15px;
+    }
+
+    .jogador-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .comparativo-valores {
+        gap: 7px;
+        font-size: 12px;
+    }
+
+    .comparativo-valores strong {
+        font-size: 17px;
+    }
+}
+
+
+/* QUIZ DO MESSI */
+#quiz-messi {
+    padding: 60px 8%;
+    text-align: center;
+    background: linear-gradient(180deg, #0b0b12, #111827);
+}
+
+#quiz-messi h2 {
+    color: #38bdf8;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.quiz-intro {
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+#quiz-container,
+#quiz-resultado {
+    max-width: 760px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: #171722;
+    border: 1px solid #303044;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px #00000040;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #e5e7eb;
+    font-weight: bold;
+}
+
+.quiz-barra-fundo {
+    width: 100%;
+    height: 10px;
+    background: #303044;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0 28px;
+}
+
+#quiz-barra-progresso {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+    transition: width 0.3s ease;
+}
+
+#quiz-pergunta {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#quiz-alternativas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.quiz-alternativa {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background: #222231;
+    border: 1px solid #3a3a50;
+    border-radius: 10px;
+    color: #f3f4f6;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-alternativa:hover:not(:disabled) {
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+.quiz-alternativa:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.quiz-alternativa.correta {
+    background: #123c2b;
+    border-color: #22c55e;
+    color: #dcfce7;
+}
+
+.quiz-alternativa.errada {
+    background: #4b1d24;
+    border-color: #ef4444;
+    color: #fee2e2;
+}
+
+#quiz-feedback {
+    min-height: 24px;
+    margin-top: 20px;
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+#quiz-proximo,
+#quiz-reiniciar {
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#quiz-proximo:hover,
+#quiz-reiniciar:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+}
+
+#quiz-resultado h3 {
+    color: #38bdf8;
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+#quiz-total-acertos,
+#quiz-mensagem {
+    color: #e5e7eb;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+#quiz-proximo[hidden],
+#quiz-resultado[hidden] {
+    display: none !important;
+}
+
+/* Ajustes para celular */
+@media (max-width: 600px) {
+    #quiz-messi {
+        padding: 40px 5%;
+    }
+
+    #quiz-container,
+    #quiz-resultado {
+        padding: 18px;
+    }
+
+    #quiz-messi h2 {
+        font-size: 26px;
+    }
+
+    #quiz-pergunta {
+        font-size: 19px;
+    }
+
+    #quiz-alternativas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
